@@ -1,0 +1,11 @@
+Mouse Sensitivity Variable
+Crouch Input
+Fix Jittering if any
+Adjust Speed
+Toggle / Hold Option
+Debug Panel / FPS
+Finite State Machine's For Walk, Crouch, Sprint, Jump, Etc
+Jump Strength (+ Double Jump)
+Falling (With State Machine)
+
+Add some ish to git
