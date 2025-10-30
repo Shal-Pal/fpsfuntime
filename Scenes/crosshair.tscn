@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cmbkafte7c6rw"]
 
-[ext_resource type="Script" uid="uid://bpkfk2irnyfh1" path="res://crosshair.gd" id="1_crosshair"]
+[ext_resource type="Script" uid="uid://cd71w2th0eqjn" path="res://Scripts/crosshair.gd" id="1_crosshair"]
 
 [node name="Crosshair" type="Control"]
 layout_mode = 3

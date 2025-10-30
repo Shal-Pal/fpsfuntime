@@ -11,21 +11,27 @@ extends Node3D
 
 # Reference to the player for movement detection
 var player: CharacterBody3D
+var camera: Camera3D
 var time: float = 0.0
 var default_position: Vector3
+var mouse_movement: Vector2 = Vector2.ZERO
 
 func _ready():
 	# Store the default position
 	default_position = position
 	
-	# Find the player node (parent should be Head -> Player)
-	if get_parent() and get_parent().get_parent():
-		player = get_parent().get_parent()
-		if player is CharacterBody3D:
-			print("WeaponHolder: Found player")
-		else:
-			player = null
-			push_warning("WeaponHolder: Parent's parent is not a CharacterBody3D")
+	# Find the camera (parent)
+	if get_parent() is Camera3D:
+		camera = get_parent()
+		
+		# Find the player node (Camera -> Head -> Player)
+		if camera.get_parent() and camera.get_parent().get_parent():
+			player = camera.get_parent().get_parent()
+			if player is CharacterBody3D:
+				print("WeaponHolder: Found player and camera")
+			else:
+				player = null
+				push_warning("WeaponHolder: Could not find player CharacterBody3D")
 
 func _process(delta):
 	time += delta
@@ -39,8 +45,8 @@ func _process(delta):
 		apply_bob(delta)
 
 func apply_sway(delta):
-	# Get mouse movement (we'll use input events for smoother sway)
-	pass
+	# Smoothly return to center when not moving mouse
+	mouse_movement = mouse_movement.lerp(Vector2.ZERO, sway_recovery_speed * delta)
 
 func apply_bob(delta):
 	if not player:
@@ -64,11 +70,9 @@ func apply_bob(delta):
 		# Return to default position when not moving
 		position = position.lerp(default_position, sway_recovery_speed * delta)
 
-var mouse_movement: Vector2 = Vector2.ZERO
-
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		# Apply sway based on mouse movement
+		# Store mouse movement for sway
 		mouse_movement = event.relative
 		
 		# Calculate sway
@@ -78,6 +82,3 @@ func _input(event):
 		# Apply sway with limits
 		position.x = clamp(default_position.x + sway_x, default_position.x - 0.1, default_position.x + 0.1)
 		position.y = clamp(default_position.y + sway_y, default_position.y - 0.1, default_position.y + 0.1)
-		
-		# Smoothly decay the mouse movement
-		mouse_movement = mouse_movement.lerp(Vector2.ZERO, sway_recovery_speed * get_process_delta_time())

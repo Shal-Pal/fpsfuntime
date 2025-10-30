@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bles62jmdmmys"]
+[gd_scene load_steps=15 format=3 uid="uid://cqwwnfqj5o60e"]
 
-[ext_resource type="PackedScene" uid="uid://cmbkafte7c6rw" path="res://crosshair.tscn" id="1_lquwl"]
-[ext_resource type="Script" uid="uid://x8tknjlpxk0r" path="res://player.gd" id="1_w8o5d"]
-[ext_resource type="Texture2D" uid="uid://b8rbujsp0ajvb" path="res://overcast_soil_puresky_4k.exr" id="2_lquwl"]
-[ext_resource type="Texture2D" uid="uid://cnipwjyj0muid" path="res://player_texture.png" id="3_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://r5g6hh6rclda" path="res://ground_grid.png" id="4_lquwl"]
-[ext_resource type="PackedScene" uid="uid://bweapon7holder" path="res://weapon_holder.tscn" id="5_weapon"]
+[ext_resource type="PackedScene" path="res://Scenes/crosshair.tscn" id="1_lquwl"]
+[ext_resource type="Script" uid="uid://b5ljgqntdgs0d" path="res://Scripts/player.gd" id="1_w8o5d"]
+[ext_resource type="Texture2D" uid="uid://bcrikwr5sk3dd" path="res://HDRIs/overcast_soil_puresky_4k.exr" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bdq3nfwkaecp3" path="res://Textures/player_texture.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://c88nloqnujs7i" path="res://Textures/ground_grid.png" id="4_lquwl"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7mycd"]
 panorama = ExtResource("2_lquwl")
@@ -16,9 +15,6 @@ sky_material = SubResource("PanoramaSkyMaterial_7mycd")
 [sub_resource type="Environment" id="Environment_lquwl"]
 background_mode = 2
 sky = SubResource("Sky_1bvp3")
-ambient_light_source = 3
-ambient_light_color = Color(0.8, 0.9, 1, 1)
-ambient_light_energy = 0.3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mycd"]
 albedo_texture = ExtResource("3_1bvp3")
@@ -46,7 +42,7 @@ reset_speed = 100.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lquwl")
 
-[node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
+[node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_w8o5d")
 
@@ -60,9 +56,6 @@ shape = SubResource("CapsuleShape3D_8y3xm")
 [node name="Head" type="Node3D" parent="Player"]
 
 [node name="Camera3D" type="Camera3D" parent="Player/Head"]
-fov = 80.0
-
-[node name="WeaponHolder" parent="Player/Head/Camera3D" instance=ExtResource("5_weapon")]
 
 [node name="Ground" type="StaticBody3D" parent="."]
 

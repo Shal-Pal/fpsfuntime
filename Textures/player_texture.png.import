@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8rbujsp0ajvb"
-path.bptc="res://.godot/imported/overcast_soil_puresky_4k.exr-c53802d6644a78dd3d9ef64f4747a167.bptc.ctex"
+uid="uid://bdq3nfwkaecp3"
+path.s3tc="res://.godot/imported/player_texture.png-7ad2f991bf8eb201e92de15fdd1be8b5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://overcast_soil_puresky_4k.exr"
-dest_files=["res://.godot/imported/overcast_soil_puresky_4k.exr-c53802d6644a78dd3d9ef64f4747a167.bptc.ctex"]
+source_file="res://Textures/player_texture.png"
+dest_files=["res://.godot/imported/player_texture.png-7ad2f991bf8eb201e92de15fdd1be8b5.s3tc.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ct6rr0ivirqvq"
-path="res://.godot/imported/crowbar_v2.glb-dc596bed32b0361a3255a73fe323674b.scn"
+uid="uid://bpqes0qb2u35s"
+path="res://.godot/imported/crowbar_v2.glb-5e0af83f192d5d23fca83e570626a5a1.scn"
 
 [deps]
 
-source_file="res://crowbar_v2.glb"
-dest_files=["res://.godot/imported/crowbar_v2.glb-dc596bed32b0361a3255a73fe323674b.scn"]
+source_file="res://Models/crowbar_v2.glb"
+dest_files=["res://.godot/imported/crowbar_v2.glb-5e0af83f192d5d23fca83e570626a5a1.scn"]
 
 [params]
 

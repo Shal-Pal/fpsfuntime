@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cppabms1ogv8v"
-path.s3tc="res://.godot/imported/crowbar_v2_0.png-fa2ff69b0a7f18a7d9c9278066764045.s3tc.ctex"
+uid="uid://bcrikwr5sk3dd"
+path.bptc="res://.godot/imported/overcast_soil_puresky_4k.exr-a33fc03382deb84710c0ff41b648dbdb.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "536d455506e6d1bae8394ae3d3646353"
-}
 
 [deps]
 
-source_file="res://crowbar_v2_0.png"
-dest_files=["res://.godot/imported/crowbar_v2_0.png-fa2ff69b0a7f18a7d9c9278066764045.s3tc.ctex"]
+source_file="res://HDRIs/overcast_soil_puresky_4k.exr"
+dest_files=["res://.godot/imported/overcast_soil_puresky_4k.exr-a33fc03382deb84710c0ff41b648dbdb.bptc.ctex"]
 
 [params]
 

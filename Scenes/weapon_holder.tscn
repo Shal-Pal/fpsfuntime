@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cakjfvcxrq3r2"]
 
-[ext_resource type="Script" path="res://weapon_holder.gd" id="1_weapon"]
-[ext_resource type="PackedScene" uid="uid://ct6rr0ivirqvq" path="res://crowbar_v2.glb" id="2_crowbar"]
+[ext_resource type="Script" uid="uid://br2d1degofkte" path="res://Scripts/weapon_holder.gd" id="1_weapon"]
+[ext_resource type="PackedScene" uid="uid://bpqes0qb2u35s" path="res://Models/crowbar_v2.glb" id="2_crowbar"]
 
 [node name="WeaponHolder" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -0.3, -0.5)
